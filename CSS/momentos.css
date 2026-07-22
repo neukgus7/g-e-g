@@ -1,0 +1,19 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.tituloprincipal {
+    background-color: #E8B4B8;
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin: 0;
+    font-family: 'Dancing Script', cursive;
+    font-size: 50px;
+    font-weight: 700;
+    text-transform: none;
+    letter-spacing: normal;
+    line-height: 1.2;
+    color: #2D2D2D;
+}
