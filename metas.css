@@ -1,0 +1,331 @@
+/* fonte importada */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Montserrat:wght@400;500;600&display=swap');
+
+/* estilos gerais */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #FAF7F5;
+    background-image: radial-gradient(#d8969b 1.5px, transparent 1.5px);
+    background-size: 24px 24px;
+    font-family: 'Montserrat', sans-serif;
+    color: #333333;
+    position: relative;
+    min-height: 100vh;
+}
+
+/* Moldura Superior (Cantos de cima) */
+body::before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    height: 120px;
+    pointer-events: none;
+    z-index: 999;
+    opacity: 0.95;
+    background-repeat: no-repeat, repeat-x, no-repeat;
+    background-position: left top, center 12px, right top;
+    background-size: 110px 110px, 100% 2px, 110px 110px;
+    background-image:
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath d='M 12,12 L 12,90 M 12,12 L 90,12 M 16,16 L 16,70 M 16,16 L 70,16 M 12,12 Q 50,12 50,50 Q 12,50 12,12 M 20,20 C 35,20 40,35 40,40 C 35,40 20,35 20,20 M 12,90 C 12,100 24,100 24,90 M 90,12 C 100,12 100,24 90,24' stroke='%238B4B62' stroke-width='2.5' fill='none' stroke-linecap='round'/%3E%3Ccircle cx='40' cy='40' r='3.5' fill='%238B4B62'/%3E%3C/svg%3E"),
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 2'%3E%3Cline x1='0' y1='1' x2='10' y2='1' stroke='%238B4B62' stroke-width='1.8' stroke-dasharray='6,3'/%3E%3C/svg%3E"),
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cg transform='scale(-1, 1) translate(-100, 0)'%3E%3Cpath d='M 12,12 L 12,90 M 12,12 L 90,12 M 16,16 L 16,70 M 16,16 L 70,16 M 12,12 Q 50,12 50,50 Q 12,50 12,12 M 20,20 C 35,20 40,35 40,40 C 35,40 20,35 20,20 M 12,90 C 12,100 24,100 24,90 M 90,12 C 100,12 100,24 90,24' stroke='%238B4B62' stroke-width='2.5' fill='none' stroke-linecap='round'/%3E%3Ccircle cx='40' cy='40' r='3.5' fill='%238B4B62'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* Moldura Inferior (Cantos de baixo) */
+body::after {
+    content: '';
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+    height: 120px;
+    pointer-events: none;
+    z-index: 999;
+    opacity: 0.85;
+    background-repeat: no-repeat, repeat-x, no-repeat;
+    background-position: left bottom, center bottom 12px, right bottom;
+    background-size: 110px 110px, 100% 2px, 110px 110px;
+    background-image:
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cg transform='scale(1, -1) translate(0, -100)'%3E%3Cpath d='M 12,12 L 12,90 M 12,12 L 90,12 M 16,16 L 16,70 M 16,16 L 70,16 M 12,12 Q 50,12 50,50 Q 12,50 12,12 M 20,20 C 35,20 40,35 40,40 C 35,40 20,35 20,20 M 12,90 C 12,100 24,100 24,90 M 90,12 C 100,12 100,24 90,24' stroke='%23d8969b' stroke-width='2' fill='none' stroke-linecap='round'/%3E%3Ccircle cx='40' cy='40' r='3' fill='%23d8969b'/%3E%3C/g%3E%3C/svg%3E"),
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 2'%3E%3Cline x1='0' y1='1' x2='10' y2='1' stroke='%23d8969b' stroke-width='1.5' stroke-dasharray='6,3'/%3E%3C/svg%3E"),
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cg transform='rotate(180 50 50)'%3E%3Cpath d='M 12,12 L 12,90 M 12,12 L 90,12 M 16,16 L 16,70 M 16,16 L 70,16 M 12,12 Q 50,12 50,50 Q 12,50 12,12 M 20,20 C 35,20 40,35 40,40 C 35,40 20,35 20,20 M 12,90 C 12,100 24,100 24,90 M 90,12 C 100,12 100,24 90,24' stroke='%23d8969b' stroke-width='2' fill='none' stroke-linecap='round'/%3E%3Ccircle cx='40' cy='40' r='3' fill='%23d8969b'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* topo da pagina */
+.main {
+    background-color: #E8B4B8;
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin: 0;
+}
+
+.main h1 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 70px;
+    font-weight: 400;
+    margin: 0;
+    line-height: 1.2;
+    color: #2D2D2D;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Arabesco do LADO ESQUERDO de "Nossas Metas" */
+.main h1::before {
+    content: '';
+    display: inline-block;
+    width: 50px;
+    height: 30px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 60 30'%3E%3Cpath d='M 55,15 C 35,15 30,5 15,5 C 5,5 2,12 8,18 C 14,24 25,20 20,10 C 17,4 8,8 12,14' stroke='%232D2D2D' stroke-width='2' fill='none' stroke-linecap='round'/%3E%3Ccircle cx='55' cy='15' r='2' fill='%232D2D2D'/%3E%3C/svg%3E");
+}
+
+/* Arabesco do LADO DIREITO de "Nossas Metas" */
+.main h1::after {
+    content: '';
+    display: inline-block;
+    width: 50px;
+    height: 30px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 60 30'%3E%3Cg transform='scale(-1, 1) translate(-60, 0)'%3E%3Cpath d='M 55,15 C 35,15 30,5 15,5 C 5,5 2,12 8,18 C 14,24 25,20 20,10 C 17,4 8,8 12,14' stroke='%232D2D2D' stroke-width='2' fill='none' stroke-linecap='round'/%3E%3Ccircle cx='55' cy='15' r='2' fill='%232D2D2D'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* menu de navegacao */
+.menu {
+    background-color: #F3D8D8;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin: 0;
+}
+
+.menu a {
+    letter-spacing: 0.5px;
+    font-size: 11px;
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-flex;
+    line-height: 1;
+    margin: 0 15px;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #ffffff;
+    padding: 6px 14px;
+    border-radius: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    color: #2D2D2D;
+    text-transform: uppercase;
+}
+
+.menu a:hover {
+    background-color: #f0f0f0;
+    transform: translateY(-2px);
+}
+
+/* container principal */
+.site-container {
+    max-width: 800px;
+    margin: 40px auto;
+    background-color: #ffffff;
+    padding: 50px 40px;
+    border-radius: 24px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+}
+
+/* titulos e subtitulos */
+h1 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 65px;
+    font-weight: 700;
+    text-align: center;
+    color: #2D2D2D;
+    margin: 0 0 10px 0;
+    line-height: 1.2;
+}
+
+/* Título "Construindo nosso futuro" - Mais escuro para melhor contraste */
+h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    text-align: center;
+    color: #A35D6A;
+    margin: 0 0 15px 0;
+}
+
+/* Subtítulo "Cada caixinha marcada..." - Cinza escuro para melhor leitura */
+.titulolista {
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #4A4A4A;
+    margin-bottom: 35px;
+}
+
+/* estrutura da lista */
+.lista {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    max-width: 700px;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    background-color: #F3D8D8;
+    padding: 16px 20px;
+    margin-bottom: 12px;
+    border-radius: 16px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+    border-left: 5px solid #E8B4B8;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer;
+}
+
+.item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.06);
+}
+
+/* caixinhas */
+.item input[type="checkbox"] {
+    width: 22px;
+    height: 22px;
+    margin-right: 18px;
+    cursor: pointer;
+    accent-color: #E8B4B8;
+    flex-shrink: 0;
+}
+
+/* texto e efeito da caixa quando selecionada */
+.item span {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #2D2D2D;
+    line-height: 1.4;
+    transition: color 0.2s ease, text-decoration 0.2s ease;
+}
+
+/* Risca o texto e muda a cor quando a meta for marcada */
+.item input[type="checkbox"]:checked+span {
+    text-decoration: line-through;
+    color: #888888;
+}
+
+/* Compatibilidade com o celular */
+@media (max-width: 600px) {
+
+    body::before,
+    body::after {
+        height: 60px;
+        background-size: 60px 60px, 100% 2px, 60px 60px;
+        top: 5px;
+        left: 5px;
+        right: 5px;
+    }
+
+    body::after {
+        top: auto;
+        bottom: 5px;
+    }
+
+    .main h1 {
+        font-size: 40px;
+        gap: 8px;
+    }
+
+    .main h1::before,
+    .main h1::after {
+        width: 30px;
+        height: 20px;
+    }
+
+    .menu {
+        display: flex;
+        justify-content: center;
+        gap: 8px;
+        padding: 8px 5px;
+    }
+
+    .menu a {
+        font-size: 10px;
+        padding: 5px 10px;
+        margin: 0;
+    }
+
+    .site-container {
+        margin: 15px 10px;
+        padding: 30px 15px;
+        border-radius: 16px;
+    }
+
+    h1 {
+        font-size: 45px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    .titulolista {
+        font-size: 14px;
+        margin-bottom: 25px;
+    }
+
+    .item {
+        padding: 12px 14px;
+        margin-bottom: 10px;
+        border-radius: 12px;
+    }
+
+    .item span {
+        font-size: 14px;
+    }
+
+    .item input[type="checkbox"] {
+        width: 18px;
+        height: 18px;
+        margin-right: 12px;
+    }
+}
+
+/* botao voltar a pagina principal */
+.botao-voltar {
+    text-align: center;
+    margin-top: 35px;
+}
+
+.botao-voltar a {
+    letter-spacing: 1.3px;
+    font-size: medium;
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-flex;
+    line-height: 1;
+    font-family: 'Montserrat', sans-serif;
+    background-color: hsl(0, 6%, 80%);
+    padding: 12px 24px;
+    border-radius: 25px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    color: #2D2D2D;
+    text-transform: uppercase;
+}
+
+.botao-voltar a:hover {
+    background-color: #d7c9ca;
+    transform: translateY(-2px);
+}
